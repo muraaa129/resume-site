@@ -4,14 +4,18 @@
 
 html, body {
     margin: 0;
+    padding: 0;
     color: #e2e8f0;
     overflow-x: hidden;
     width: 100%;
+    min-height: 100vh;
     font-family: "Inter", sans-serif;
+    background-color: #020617;
 }
 
 #container {
     display: flex;
+    width: 100%;
 }
 
 #sidebar {
@@ -93,6 +97,7 @@ html, body {
 @media (max-width: 768px) {
     #container {
         flex-direction: column;
+        width: 100%;
     }
 
     #sidebar {
@@ -107,6 +112,7 @@ html, body {
         width: 100%;
         font-size: 16px;
         padding: 20px;
+        background-color: #0f172a;
     }
 
     #menu {
