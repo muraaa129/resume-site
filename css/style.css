@@ -2,10 +2,11 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     margin: 0;
     color: #e2e8f0;
     overflow-x: hidden;
+    width: 100%;
     font-family: "Inter", sans-serif;
 }
 
@@ -14,7 +15,7 @@ body {
 }
 
 #sidebar {
-    width: clamp(250px, 30%, 400px);
+    width: 400px;
     min-height: 100vh;
     position: fixed;
     background-color: #020617;
@@ -50,8 +51,8 @@ body {
 #main_content {
     background-color: #0f172a;
     font-size: 18px;
-    margin-left: clamp(250px, 30%, 400px);
-    width: calc(100% - clamp(250px, 30%, 400px));
+    margin-left: 400px;
+    width: calc(100% - 400px);
     min-height: 100vh;
     padding: 40px;
 }
@@ -81,7 +82,7 @@ body {
     color: #38bdf8;
     transform: translateY(-2px);
 }
-#menu button:active {
+#menu button.active {
     color: #38bdf8;
     border-bottom: 2px solid #38bdf8;
 }
