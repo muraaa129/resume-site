@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    
+    <div id="container">
+        <div id="sidebar">
+            <div class="sidebar_image">
+                <img src="/images/IMG_2141.jpg" alt="Student Picture" style="height: 150px;">
+            </div>
+
+            <div class="sidebar_name">
+                <p>Yussupkhanov Murat</p>
+            </div> 
+
+            <div class="sidebar_department">
+                <p>Student of Computer Engineering</p>
+            </div>
+        </div>
+
+        <div id="main_content">
+            <div id="menu">
+                <button onclick="showSection('about_me', this)">About</button>
+                <button onclick="showSection('education', this)">Education</button>
+                <button onclick="showSection('skills', this)">Skills</button>
+                <button onclick="showSection('projects', this)">Projects</button>
+                <button onclick="showSection('contacts', this)">Contacts</button>
+            </div>
+
+            <div id="about_me">
+                <h1>About me</h1>
+                <p>I am a Computer Engineering student at Karabük University in Turkey. My first contact with computer technologies began in 
+                    childhood when my father gave me my first computer with games installed. <br> <br>
+                    Later, when choosing my future career path, I decided to dedicate myself to the IT field. 
+                    My first serious experience with development started with Frontend Development courses, where I studied 
+                    HTML and CSS and obtained a basic certificate. During this period, I also began learning JavaScript on my own 
+                    and built several small projects to practice. <br> <br>
+                    After that, I became interested in Game Development and independently studied C# and Unity, 
+                    creating simple projects for practice. However, I paused this path due to starting university. <br> <br>
+                    At university, I studied C and C++, followed by SQL, HTML/CSS, and PHP. Currently, 
+                    my main interests include <strong>Web Development</strong>, <strong>Database Systems</strong>, <strong>Game Dev</strong>, 
+                    and <strong>AI</strong> and <strong>ML</strong> .
+                </p>
+            </div>
+
+            <div id="skills">
+                <h1>Skills</h1>
+
+                <div>
+                    <h3>Development</h3>
+                    <ul>
+                        <li>Frontend Development</li>
+                        <li>Backend Development</li>
+                        <li>Database Design / Programming</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Programming Languages</h3>
+                    <ul>
+                        <li>HTML & CSS</li>
+                        <li>C / C++ / C#</li>
+                        <li>PHP</li>
+                        <li>JS</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3>Languages</h3>
+                    <ul>
+                        <li>Kazakh — C2 (Native)</li>
+                        <li>Russian — B2</li>
+                        <li>English — B2</li>
+                        <li>Turkish — B2</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="education">
+                <h1>Education</h1>
+                <div>
+                    <h3>Karabuk University</h3>
+                    <ul>
+                        <li>Department of Computer Engineering</li>
+                        <li>2024 - Present</li>
+                    </ul>
+                </div>
+                            
+                <div>
+                    <h3>Secondary School №35</h3>
+                    <ul>
+                        <li>Shymkent, Kazakhstan</li>
+                        <li>2011-2022</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="projects">
+                <h1>Projects</h1>
+                <div>
+                    <h3>Farm Management System</h3>
+                    <ul>
+                        <li>A student project combining two courses: Internet Based Programming and Database Systems. 
+                        This is a web application for farm management. In this project, I was responsible for implementing CRUD 
+                        logic for all main system entities.</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Resume Website</h3>
+                    <ul>
+                        <li>
+                            A personal portfolio website developed using HTML, CSS, and JavaScript. 
+                        The site features a responsive design and structured sections with interactive content switching.
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Authentication Form</h3>
+                    <ul>
+                        <li>An authentication system developed using PHP, HTML, and a simple database. 
+                        This project was created as part of a university laboratory assignment.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="contacts">
+                <h1>Contacts</h1>
+                <p>You can contact me via email or phone.</p>
+                <ul>
+                    <li>Email: muratyusupkhanov@gmail.com</li>
+                    <li>Phone Turkey: +90 507 665 3706</li>
+                    <li>Phone Kazakhstan: +7 708 957 1483</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId, btn) {
+            const sections = document.querySelectorAll('#main_content > div:not(#menu)');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            document.getElementById(sectionId).style.display = 'block';
+
+            const buttons = document.querySelectorAll('#menu button');
+            buttons.forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            if(btn) {
+                btn.classList.add('active');
+            }
+        }
+
+        window.onload = function() {
+            showSection('about_me', document.querySelector('#menu button'));
+        }
+    </script>
+    
+
+</body>
+</html>
